@@ -32,12 +32,12 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   position: fixed;
-  top: 50%;
+  top: 30%; /*initially it was 50%*/
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0%;
+  opacity: 0%;     /*initial popup opacity, can be 20% to see initial position*/
   text-align: center;
 }
 .popup-modal p {
@@ -47,17 +47,24 @@ button {
 .backdrop {
   pointer-events: none;
   position: fixed;
+  top: 30%; 
+  left: 50%;
   inset: 0;
   background: #000;
   opacity: 0%;
+  
 }
 
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  position: fixed;
+  top: 50%;
+  transition: top 0.5s ease; /* IE 10, Fx 16+, Op 12.1+ */ 
 }
 
 .backdrop.show {
   opacity: 30%;
+  transition: top 0.5s ease; /* IE 10, Fx 16+, Op 12.1+ */
 }
 
