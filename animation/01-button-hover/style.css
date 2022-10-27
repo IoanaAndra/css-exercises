@@ -17,3 +17,10 @@ button {
   padding: 16px 24px;
   text-align: center;
 }
+
+button:hover {
+  -webkit-transform: scale(1.25); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: scale(1.25); /* IE 9 */
+      transform: scale(1.25); /* IE 10, Fx 16+, Op 12.1+ */
+}
+ 
