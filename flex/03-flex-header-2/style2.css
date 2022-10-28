@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-around;
   overflow: auto;
-  margin: auto;
+  margin: 0;
 }
 
 .profile-image {
