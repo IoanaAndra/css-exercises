@@ -1,13 +1,17 @@
-//Using GET Method
+//Using POST Method
 
 <?php
 
-if(isset($_GET["name"]) || isset($_GET["age"]) || isset($_GET["location"]))
+if(isset($_POST["name"]) || isset($_POST["age"]) || isset($_POST["location"]))
 
 {
-    echo "Hello ". $_GET['name']. "<br/>";
-    echo "Age: ".$_GET['age']." years.<br/>";
-    echo "Location: ".$_GET['location'];
+    if(preg_match("/[^A-Za-z'-]/", $_POST['name']))
+    {
+        die("Invalid name. Name should contain letters only.");
+    }
+    echo "Hello ". $_POST['name']. "<br/>";
+    echo "Age: ".$_POST['age']." years.<br/>";
+    echo "Location: ".$_POST['location'];
 }
 //print_r($_GET);
 
@@ -22,7 +26,7 @@ if(isset($_GET["name"]) || isset($_GET["age"]) || isset($_GET["location"]))
     <title>Form</title>
   </head>
   <body>
-      <div><form action = "<?php $_PHP_SELF ?>" method = "GET"></div>
+      <div><form action = "<?php $_PHP_SELF ?>" method = "POST"></div>
       Name: <input type="text" name = "name" />
       Age: <input type="text" name = "age" />
       Location: <input type="text" name = "location" />
