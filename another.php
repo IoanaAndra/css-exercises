@@ -1,4 +1,4 @@
-//Using POST Method
+<!--Using POST Method-->
 
 <?php
 
@@ -12,6 +12,8 @@ if(isset($_POST["name"]) || isset($_POST["age"]) || isset($_POST["location"]))
     echo "Hello ". $_POST['name']. "<br/>";
     echo "Age: ".$_POST['age']." years.<br/>";
     echo "Location: ".$_POST['location'];
+
+    exit();
 }
 //print_r($_GET);
 

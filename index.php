@@ -1,19 +1,19 @@
-//Using GET Method
+<!--Using GET Method-->
 
 <?php
 
-if(isset($_GET["name"]) || isset($_GET["age"]) || isset($_GET["location"]))
+// if(isset($_GET["name"]) || isset($_GET["age"]) || isset($_GET["location"]))
 
-{
-    echo "Hello ". $_GET['name']. "<br/>";
-    echo "Age: ".$_GET['age']." years.<br/>";
-    echo "Location: ".$_GET['location'];
-}
+// {
+//     echo "Hello ". $_GET['name']. "<br/>";
+//     echo "Age: ".$_GET['age']." years.<br/>";
+//     echo "Location: ".$_GET['location'];
+// }
 //print_r($_GET);
 
 
 ?>
-
+<!--
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -31,3 +31,5 @@ if(isset($_GET["name"]) || isset($_GET["age"]) || isset($_GET["location"]))
     </div>
   </body>
 </html>
+
+-->
